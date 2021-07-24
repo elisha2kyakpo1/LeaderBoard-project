@@ -1,0 +1,31 @@
+{
+  "name": "leaderboard-project",
+  "version": "1.0.0",
+  "description": "In this project I have implemented an Asynchronous JavaScript code to use an API, the data from a form is sent to the server using a post request and a get request to fetch the result back to the a web page. The project uses JavaScript, HTML/CSS, webpack and ES6 syntax",
+  "main": "index.js",
+  "dependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.31.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint": "^13.13.1",
+    "stylelint-scss": "^3.20.1",
+    "stylelint-csstree-validator": "^1.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elisha2kyakpo1/LeaderBoard-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/elisha2kyakpo1/LeaderBoard-project/issues"
+  },
+  "homepage": "https://github.com/elisha2kyakpo1/LeaderBoard-project#readme"
+}
