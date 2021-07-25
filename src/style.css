@@ -1,0 +1,9 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.inner-container {
+  justify-content: space-around;
+  align-items: center;
+}
