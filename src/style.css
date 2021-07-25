@@ -5,5 +5,12 @@ body {
 
 .inner-container {
   justify-content: space-around;
-  align-items: center;
+}
+
+.form {
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 3px;
 }

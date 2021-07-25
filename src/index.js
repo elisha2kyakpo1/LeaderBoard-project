@@ -1,18 +1,58 @@
-const container = document.querySelector('.container');
-const resultContainer = document.createElement('div');
-const formContainer = document.createElement('div');
-const form = document.createElement('form');
-const contentContainer = document.createElement('div');
-const title = document.createElement('hi');
-const recentScores = document.createElement('h4');
-const addYourScore = document.createElement('h4');
+import './style.css';
+import { getScores, postScore } from './api';
+import topScores from './sort';
 
-container.appendChild(contentContainer);
-container.appendChild(title);
-contentContainer.appendChild(formContainer);
-formContainer.appendChild(form);
-contentContainer.appendChild(resultContainer);
-formContainer.appendChild(addYourScore);
-resultContainer.appendChild(recentScores);
+const leaderboardContainer = document.querySelector('#list');
+const btn  = document.querySelector('#submit');
+const leaderboard = [
+  {
+    name: 'elisha',
+    score: 50,
+  },
+  {
+    name: 'martin',
+    score: 90,
+  },
+];
 
-title.textContent = 'Leaderboard';
+const displayScores = () => {
+  if (leaderboard !== null) {
+    leaderboard.forEach((ele) => {
+      const row = document.createElement('tr');
+      const allScores = getScores();
+      // const sorted = topScores(allScores.result);
+      row.innerHTML = `
+        <td>${ele.name}</td>
+        <td>${ele.score}</td>
+      `;
+      leaderboardContainer.appendChild(row);
+    })
+  }
+  console.log(leaderboard);
+};
+
+const addData = () => {
+  const names = document.querySelector('.name').value;
+  const scores = document.querySelector('.score').value;
+  const scoresData = {
+    name: names,
+    score: scores,
+  };
+
+  if (names !== '' || scores != '') {
+    leaderboard.push(scoresData);
+  }
+};
+
+const clearFields = () => {
+  document.querySelector('.name').value = '';
+  document.querySelector('.score').value = '';
+};
+
+btn.addEventListener('click', () => {
+  addData();
+  clearFields();
+  displayScores();
+});
+
+displayScores();
