@@ -1,6 +1,5 @@
 const topScores = (scores) => scores.sort((a, b) => {
-  if (+a.score > +b.score) return -1;
-  return 1;
+  return parseInt(b.score, 10) - parseInt(a.score, 10);
 });
 
 export default topScores;

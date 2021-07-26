@@ -15,34 +15,38 @@ const leaderboard = [
   },
 ];
 
-const displayScores = () => {
-  if (leaderboard !== null) {
-    leaderboard.forEach((ele) => {
+const displayScores = async () => {
+  // if (leaderboard !== null) {
+    // leaderboard.forEach((ele) => {
       const row = document.createElement('tr');
-      const allScores = getScores();
-      // const sorted = topScores(allScores.result);
+      const allScores = await getScores();
+      const sorted = topScores(allScores.result);
+      const newArr = sorted.slice(0, 11);
+
+      newArr.forEach((ele) => {
+        console.log(ele)
       row.innerHTML = `
-        <td>${ele.name}</td>
+        <td>${ele.user}</td>
         <td>${ele.score}</td>
       `;
       leaderboardContainer.appendChild(row);
     })
-  }
-  console.log(leaderboard);
+  // }
+  // console.log(leaderboard);
 };
 
-const addData = () => {
-  const names = document.querySelector('.name').value;
-  const scores = document.querySelector('.score').value;
-  const scoresData = {
-    name: names,
-    score: scores,
-  };
+// const addData = () => {
+//   const names = document.querySelector('.name').value;
+//   const scores = document.querySelector('.score').value;
+//   const scoresData = {
+//     name: names,
+//     score: scores,
+//   };
 
-  if (names !== '' || scores != '') {
-    leaderboard.push(scoresData);
-  }
-};
+//   if (names !== '' || scores != '') {
+//     leaderboard.push(scoresData);
+//   }
+// };
 
 const clearFields = () => {
   document.querySelector('.name').value = '';
@@ -50,9 +54,12 @@ const clearFields = () => {
 };
 
 btn.addEventListener('click', () => {
-  addData();
+  // addData();
+  const names = document.querySelector('.name').value;
+  const scores = document.querySelector('.score').value;
+  postScore(names, scores);
   clearFields();
-  displayScores();
+  // displayScores();
 });
 
 displayScores();
