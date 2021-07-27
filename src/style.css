@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.inner-container {
+  justify-content: space-around;
+}
+
+.form {
+  flex-direction: column;
+}
+
+.btn {
+  border-radius: 3px;
+}

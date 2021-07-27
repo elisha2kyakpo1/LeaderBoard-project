@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://bootswatch.com/4/yeti/bootstrap.min.css">
+  <title>LeaderBoard</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 class="text-center">Leaderboard</h2>
+    <div class="inner-container d-flex">
+      <div class="scores-container">
+        <div class="d-flex">
+          <h4>Recent scores</h4>
+          <button type="button" class="btn">reflesh</button>
+        </div>
+        <div class="">
+          <table class="table table-striped mt-4">
+            <thead class="thead-dark">
+                <tr>
+                  <th class="display-5 lead text-white">Name</th>
+                  <th class="display-5 lead text-white">Scores</th>                 
+                </tr>
+            </thead>
+            <tbody id="list">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="form-container">
+        <h4>Add your score</h4>
+        <form action="#" class="d-flex form">
+          <input type="text" class="name form-control mb-4" placeholder="Your name">
+          <input type="number" class="score form-control mb-4" placeholder="your score">
+          <input type="submit" value="submit" id="submit" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
