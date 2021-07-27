@@ -7,10 +7,56 @@ body {
   justify-content: space-around;
 }
 
+.table {
+  border: 1px solid black;
+}
+
+.title {
+  margin-left: 60px;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
 .form {
   flex-direction: column;
 }
 
+.sub {
+  border-radius: 20px;
+}
+
 .btn {
-  border-radius: 3px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.recent,
+.lead {
+  font-weight: 600;
+}
+
+.form-container {
+  margin-top: 70px;
+  width: 35%;
+}
+
+.scores-container {
+  width: 40%;
+}
+
+.name,
+.score {
+  border-radius: 8px;
+  padding: 8px 5px;
+  font-size: 1.2rem;
+}
+
+.recent-scores {
+  align-items: center;
+}
+
+.btn-refresh {
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }

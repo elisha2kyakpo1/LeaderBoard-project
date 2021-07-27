@@ -6,7 +6,7 @@ const leaderboardContainer = document.querySelector('#list');
 const btn = document.querySelector('#submit');
 const displayScores = async () => {
   const api = await getScores();
-  const sortedData = topScores(api.result).splice(0, 100);
+  const sortedData = topScores(api.result);
   sortedData.forEach((ele) => {
     const row = document.createElement('tr');
     row.innerHTML = `
@@ -36,7 +36,7 @@ const refreshData = () => {
   window.location.reload();
 };
 
-const refresh = document.querySelector('.btn-reflesh');
+const refresh = document.querySelector('.btn-refresh');
 refresh.addEventListener('click', refreshData);
 
 displayScores();

@@ -9,12 +9,12 @@
 </head>
 <body>
   <div class="container mt-5">
-    <h2 class="text-center">Leaderboard</h2>
+    <h2 class="title mb-5">Leaderboard</h2>
     <div class="inner-container d-flex">
       <div class="scores-container">
-        <div class="d-flex">
-          <h4>Recent scores</h4>
-          <button type="button" class="btn-reflesh">refresh</button>
+        <div class="d-flex recent-scores">
+          <h4 class="recent">Recent scores</h4>
+          <button type="button" class="btn-refresh btn btn-dark ml-2">refresh</button>
         </div>
         <div class="">
           <table class="table table-striped mt-4">
@@ -30,11 +30,11 @@
         </div>
       </div>
       <div class="form-container">
-        <h4>Add your score</h4>
+        <h4 class="recent">Add your score</h4>
         <form action="#" class="d-flex form">
           <input type="text" class="name form-control mb-4" placeholder="Your name">
           <input type="number" class="score form-control mb-4" placeholder="your score">
-          <input type="submit" value="submit" id="submit" class="btn btn-success">
+          <input type="submit" value="submit" id="submit" class="sub btn btn-success">
         </form>
       </div>
     </div>
