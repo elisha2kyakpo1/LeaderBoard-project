@@ -1,6 +1,4 @@
 import './style.css';
-import { getScores, postScore } from './api';
-import topScores from './sort';
 
 const leaderboardContainer = document.querySelector('#list');
 const btn  = document.querySelector('#submit');
@@ -15,38 +13,38 @@ const leaderboard = [
   },
 ];
 
-const displayScores = async () => {
-  // if (leaderboard !== null) {
-    // leaderboard.forEach((ele) => {
-      const row = document.createElement('tr');
-      const allScores = await getScores();
-      const sorted = topScores(allScores.result);
-      const newArr = sorted.slice(0, 11);
+const hidden = () => {
+  while (leaderboardContainer.lastElementChild) {
+    leaderboardContainer.removeChild(leaderboardContainer.lastElementChild);
+  }
+};
 
-      newArr.forEach((ele) => {
-        console.log(ele)
+const displayScores = async () => {
+  hidden();
+  if (leaderboard !== null) {
+    leaderboard.forEach((ele) => {
+      const row = document.createElement('tr');
       row.innerHTML = `
-        <td>${ele.user}</td>
+        <td>${ele.name}</td>
         <td>${ele.score}</td>
       `;
       leaderboardContainer.appendChild(row);
     })
-  // }
-  // console.log(leaderboard);
+  }
 };
 
-// const addData = () => {
-//   const names = document.querySelector('.name').value;
-//   const scores = document.querySelector('.score').value;
-//   const scoresData = {
-//     name: names,
-//     score: scores,
-//   };
+const addData = () => {
+  const names = document.querySelector('.name').value;
+  const scores = document.querySelector('.score').value;
+  const scoresData = {
+    name: names,
+    score: scores,
+  };
 
-//   if (names !== '' || scores != '') {
-//     leaderboard.push(scoresData);
-//   }
-// };
+  if (names !== '' || scores != '') {
+    leaderboard.push(scoresData);
+  }
+};
 
 const clearFields = () => {
   document.querySelector('.name').value = '';
@@ -54,12 +52,9 @@ const clearFields = () => {
 };
 
 btn.addEventListener('click', () => {
-  // addData();
-  const names = document.querySelector('.name').value;
-  const scores = document.querySelector('.score').value;
-  postScore(names, scores);
+  addData();
   clearFields();
-  // displayScores();
+  displayScores();
 });
 
 displayScores();
