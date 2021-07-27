@@ -4,8 +4,6 @@ import './style.css';
 
 const leaderboardContainer = document.querySelector('#list');
 const btn = document.querySelector('#submit');
-
-
 const displayScores = async () => {
   const api = await getScores();
   const sortedData = topScores(api.result).splice(0, 100);
