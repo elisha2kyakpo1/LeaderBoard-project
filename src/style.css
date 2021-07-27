@@ -8,8 +8,9 @@ body {
 }
 
 .title {
+  margin-left: 60px;
   font-weight: 700;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
 }
 
 .form {
