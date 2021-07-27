@@ -35,7 +35,7 @@ btn.addEventListener('click', () => {
 });
 
 const refleshData = () => {
-  
+  location.reload();
 };
 
 const reflesh = document.querySelector('.btn-reflesh');
