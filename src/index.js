@@ -32,11 +32,11 @@ btn.addEventListener('click', () => {
   }
 });
 
-const refleshData = () => {
+const refreshData = () => {
   location.reload();
 };
 
-const reflesh = document.querySelector('.btn-reflesh');
-reflesh.addEventListener('click', refleshData)
+const refresh = document.querySelector('.btn-reflesh');
+refresh.addEventListener('click', refreshData)
 
 displayScores();
