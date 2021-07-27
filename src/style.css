@@ -48,6 +48,7 @@ body {
 .score {
   border-radius: 8px;
   padding: 8px 5px;
+  font-size: 1.2rem;
 }
 
 .recent-scores {
