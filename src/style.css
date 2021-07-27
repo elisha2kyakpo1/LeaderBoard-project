@@ -7,6 +7,10 @@ body {
   justify-content: space-around;
 }
 
+.table {
+  border: 1px solid black;
+}
+
 .title {
   margin-left: 60px;
   font-weight: 700;
