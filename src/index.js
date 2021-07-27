@@ -1,7 +1,7 @@
 import './style.css';
 
 const leaderboardContainer = document.querySelector('#list');
-const btn  = document.querySelector('#submit');
+const btn = document.querySelector('#submit');
 const leaderboard = [
   {
     name: 'elisha',
@@ -29,7 +29,7 @@ const displayScores = async () => {
         <td>${ele.score}</td>
       `;
       leaderboardContainer.appendChild(row);
-    })
+    });
   }
 };
 
@@ -41,7 +41,7 @@ const addData = () => {
     score: scores,
   };
 
-  if (names !== '' || scores != '') {
+  if (names !== '' || scores !== '') {
     leaderboard.push(scoresData);
   }
 };

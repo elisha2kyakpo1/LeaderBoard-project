@@ -7,8 +7,8 @@ const getScores = async (gameId = MyGameId) => {
   const data = await fetch(gameScoresURL);
   const userScores = await data.json();
   return userScores;
-
 };
+
 const postScore = async (userName, userScore, gameId = MyGameId) => {
   const gameScoresURL = `${baseURL}games/${gameId}/scores`;
 
