@@ -1,6 +1,5 @@
 const MyGameId = 'Zl4d7IVkemOTTVg2fUdz';
 const baseURL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
-// https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/Zl4d7IVkemOTTVg2fUdz/scores
 const getScores = async (gameId = MyGameId) => {
   const gameScoresURL = `${baseURL}games/${gameId}/scores`;
 
