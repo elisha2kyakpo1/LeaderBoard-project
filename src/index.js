@@ -29,7 +29,6 @@ btn.addEventListener('click', () => {
   const scores = document.querySelector('.score').value;
 
   if (names !== '' || scores !== '') {
-    leaderboard.push(scoresData);
     postScore(names, scores);
     clearFields();
   }
