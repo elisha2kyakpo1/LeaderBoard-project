@@ -36,7 +36,7 @@ const refreshData = () => {
   window.location.reload();
 };
 
-const refresh = document.querySelector('.btn-reflesh');
+const refresh = document.querySelector('.btn-refresh');
 refresh.addEventListener('click', refreshData);
 
 displayScores();

@@ -7,10 +7,50 @@ body {
   justify-content: space-around;
 }
 
+.title {
+  font-weight: 700;
+  font-size: 2.2rem;
+}
+
 .form {
   flex-direction: column;
 }
 
+.sub {
+  border-radius: 20px;
+}
+
 .btn {
-  border-radius: 3px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.recent,
+.lead {
+  font-weight: 600;
+}
+
+.form-container {
+  margin-top: 70px;
+  width: 35%;
+}
+
+.scores-container {
+  width: 40%;
+}
+
+.name,
+.score {
+  border-radius: 8px;
+  padding: 8px 5px;
+}
+
+.recent-scores {
+  align-items: center;
+}
+
+.btn-refresh {
+  border-radius: 10px;
+  border: none;
+  outline: none;
 }
