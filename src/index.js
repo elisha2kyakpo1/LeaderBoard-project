@@ -34,4 +34,11 @@ btn.addEventListener('click', () => {
   }
 });
 
+const refleshData = () => {
+  
+};
+
+const reflesh = document.querySelector('.btn-reflesh');
+reflesh.addEventListener('click', refleshData)
+
 displayScores();
